@@ -27,6 +27,18 @@ a.navbar-brand {
 body {
   background: url('background.png');
   background-attachment: fixed;
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+.clr {
+  clear:both;
 }
 
 h3, h4, h5, h6, .navbar {
@@ -84,4 +96,40 @@ p, h3, h4{
 .text-container {
   background: white;
   color: black;
+}
+
+.booyah-box {
+  margin-top: 20px;
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding:10px;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: relative;
+  background: rgba(0, 0, 0, 0);
+}
+
+.footer-text {
+  font-family: "Old Standard TT", sans-serif;
+  color: black;
+  text-align: center;
+  bottom: 0;
+  height:60px;
+  margin-top: 20px;
+  font-size: 15px;
+  padding:10px 0px;
+  font-family: "Vollkorn", serif;
+  a {
+    color: white;
+  }
+
 }
