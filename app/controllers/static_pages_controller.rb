@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
   def index
-  end 
+    @course = Course.all
+  end
 end

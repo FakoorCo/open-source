@@ -75,9 +75,6 @@
     <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
-    <div class="body-container">
-
-    </div>
 
     <%= yield %>
 
@@ -87,13 +84,13 @@
 
     <br class="clr"/>
 
-    <footer class="footer">
+    <div class="footer">
       <div class="footer-container">
         <b> TEACHERS </b>
         <br/>
         <p><%= link_to 'Teach a Course', new_instructor_course_path %></p>
       </div>
-    </footer>
+    </div>
 
   </body>
 </html>
