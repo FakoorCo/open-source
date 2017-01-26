@@ -20,16 +20,24 @@ font-family: 'Ubuntu', sans-serif; */
   border-radius: 0;
 }
 
-.navbar-collapse {
-  background: transparent;
-}
-
 .nav.navbar-nav li a {
  color: white;
  }
 
+a.icon-bar {
+  color: white;
+}
+
+a.dropdown-menu, li.dropdown-menu, a.dropdown-header, .dropdown {
+  color: black;
+}
+
+#navbar-collapse > .dropdown-menu {
+    background:transparent !important;
+}
+
 .nav.navbar-nav a:hover {
- color: white;
+ color: rgba(122, 240, 255, 1);
 }
 
 
