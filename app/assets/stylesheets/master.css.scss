@@ -1,6 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans|Lato|Old+Standard+TT|PT+Sans|Ubuntu|Vollkorn');
+@import url("http://fonts.googleapis.com/css?family=Warnes");
+
 
 html *
 {
@@ -19,8 +21,17 @@ font-family: 'Ubuntu', sans-serif; */
   font-family: "Vollkorn", serif;
   font-weight: 200;
   box-shadow: 0px 1px 2px #2a2a2a;
-  background:url('#');
-  background: url('ricepaper.png');
+  background: -webkit-linear-gradient(-69.43630450988735deg, rgba(255,255,255,1) 0, rgba(224,241,255,1) 100%);
+  background: -moz-linear-gradient(159.43630450988735deg, rgba(255,255,255,1) 0, rgba(224,241,255,1) 100%);
+  background: linear-gradient(159.43630450988735deg, rgba(255,255,255,1) 0, rgba(224,241,255,1) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  background-attachment: fixed;
 }
 
 a.navbar-brand {
@@ -29,7 +40,20 @@ a.navbar-brand {
 }
 
 body {
-  background: url('background.png');
+
+  background-attachment: fixed;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  background: url("http://enjoycss.com/bg-img/default/3_6.png");
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
   background-attachment: fixed;
   height: 100%;
   margin: 0;
@@ -73,7 +97,6 @@ p, h3, h4{
 }
 
 .hero {
-  background: url('ricepaper.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -81,6 +104,22 @@ p, h3, h4{
   height:250px;
   box-shadow: 0px 1px 2px #2a2a2a;
   padding-top: 8px;
+
+  -webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+border: none;
+
+background: -webkit-linear-gradient(0deg, rgba(0,0,0,0) 79px, rgb(171,206,212) 79px, rgb(171,206,212) 81px, rgba(0,0,0,0) 81px), -webkit-linear-gradient(90deg, rgb(238,238,238) 0.1em, rgba(0,0,0,0) 0.1em), rgb(255, 255, 255);
+background: -moz-linear-gradient(90deg, rgba(0,0,0,0) 79px, rgb(171,206,212) 79px, rgb(171,206,212) 81px, rgba(0,0,0,0) 81px), -moz-linear-gradient(0deg, rgb(238,238,238) 0.1em, rgba(0,0,0,0) 0.1em), rgb(255, 255, 255);
+background: linear-gradient(90deg, rgba(0,0,0,0) 79px, rgb(171,206,212) 79px, rgb(171,206,212) 81px, rgba(0,0,0,0) 81px), linear-gradient(0deg, rgb(238,238,238) 0.1em, rgba(0,0,0,0) 0.1em), rgb(255, 255, 255);
+background-position: auto auto;
+-webkit-background-origin: padding-box;
+background-origin: padding-box;
+-webkit-background-clip: border-box;
+background-clip: border-box;
+-webkit-background-size: 100% 1.2em;
+background-size: 100% 1.2em;
 }
 
 .home-column {
@@ -98,6 +137,8 @@ p, h3, h4{
 .text-container {
   background: white;
   color: black;
+  margin-left: 100px;
+  margin-right: 10px;
 }
 
 .booyah-box {
@@ -124,9 +165,9 @@ p, h3, h4{
 .footer-block {
   font-family: "Vollkorn", serif;
   text-align: center;
-  color: black;
+  color: rgba(255,255,255,1);
   a {
-    color: black;
+    color: white;
     font-weight: 600;
   }
 }
@@ -209,15 +250,27 @@ p, h3, h4{
    padding:10px;
 }
 
-.brand-css {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+.brand-css  {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
   border: none;
-  font: normal 79px/1 "Vollkorn", sans-serif;
-  color: white;
-  text-align: center;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5) ;
+  font: normal 85px/normal "Warnes", Helvetica, sans-serif !important;
+  color: rgba(255,255,255,1);
+  text-decoration: normal;
+  text-align: center !important;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: pre;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.brand-css:hover {
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
 }
