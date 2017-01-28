@@ -32,6 +32,8 @@ a.dropdown-menu, li.dropdown-menu, a.dropdown-header, .dropdown {
   color: black;
 }
 
+
+
 #navbar-collapse > .dropdown-menu {
     background:transparent !important;
 }
@@ -39,7 +41,6 @@ a.dropdown-menu, li.dropdown-menu, a.dropdown-header, .dropdown {
 .nav.navbar-nav a:hover {
  color: rgba(122, 240, 255, 1);
 }
-
 
 a.navbar-brand {
   font-weight: 100;
@@ -279,4 +280,12 @@ p, h3, h4{
 
 .brand-css:hover {
   text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #cccccc;
+  border-radius: 1px;
 }
