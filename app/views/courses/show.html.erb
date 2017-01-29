@@ -35,11 +35,14 @@
       </div>
     <% end %>
   </div>
-
-  <% if current_user && current_user == @course.user %>
-    <br />
-    <br />
-    <%= link_to 'Administrator', instructor_course_path(@course), class: 'enjoy-css' %>
-  <% end %>
+  <br/><br/>
+  
+    <div class="pull-right">
+    <% if current_user && current_user == @course.user %>
+      <br />
+      <br />
+      <%= link_to 'Administrator', instructor_course_path(@course), class: 'enjoy-css' %>
+    <% end %>
+  </div>
 
 </div>
