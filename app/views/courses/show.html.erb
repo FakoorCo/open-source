@@ -36,13 +36,16 @@
     <% end %>
   </div>
   <br/><br/>
-  
+
     <div class="pull-right">
     <% if current_user && current_user == @course.user %>
       <br />
       <br />
       <%= link_to 'Administrator', instructor_course_path(@course), class: 'enjoy-css' %>
     <% end %>
+      <br/>
+      <br/>
+      <%= link_to 'Enroll', course_enrollments_path(@course), class: 'enjoy-css', method: :post %>
   </div>
 
 </div>
