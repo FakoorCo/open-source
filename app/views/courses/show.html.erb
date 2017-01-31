@@ -7,7 +7,6 @@
     <span class="label label-default">
       <%= number_to_currency @course.cost %>
     </span>
-
   </div>
 
   <div class="col-sm-8 col-xs-12">
@@ -23,12 +22,19 @@
         <div class="col-xs-12 col-sm-6">
           <div class="lesson text-center">
             <br/>
-            <%= link_to lesson_path(lesson) do %>
-            <b><%= lesson.title %></b>
-            <br/>
-            <%= lesson.subtitle %>
+            <% if current_user && current_user.enrolled_in?(@course) %>
+                <%= link_to lesson_path(lesson) do %>
+                  <b><%= lesson.title %></b>
+                  <br/>
+                  <%= lesson.subtitle %>
+                <% end %>
+            <% else %>
+              <b><%= lesson.title %></b>
+              <br/>
+              <%= lesson.subtitle %>
             <% end %>
           </div>
+
         </div>
         <% end %>
         <br class="clr"/>
@@ -37,18 +43,19 @@
   </div>
   <br/><br/>
 
-    <div class="pull-right">
-    <% if current_user && current_user == @course.user %>
-      <br />
-      <br />
-      <%= link_to 'Administrator', instructor_course_path(@course), class: 'enjoy-css' %>
-    <% end %>
-      <br/>
-      <br/>
+  <div class="pull-right">
+      <% if current_user && current_user == @course.user %>
+  <br />
+  <br />
+        <%= link_to 'Administrator', instructor_course_path(@course), class: 'enjoy-css' %>
+      <% end %>
+  <br/>
+  <br/>
       <% if current_user && current_user.enrolled_in?(@course) %>
         <h3 class="label label-info pull-right">You are enrolled!</h3>
       <% else %>
-        <%= link_to 'Enroll', course_enrollments_path(@course), class: 'enjoy-css', method: :post %>        <% end %>
-      </div>
+        <%= link_to 'Enroll', course_enrollments_path(@course), class: 'enjoy-css', method: :post %>
+      <% end %>
+  </div>
 
 </div>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   resources :courses, only: [:index, :show] do
     resources :enrollments, only: :create
-  end 
+  end
   resources :lessons, only: [:show]
   namespace :instructor do
     resources :sections, only: [] do
@@ -16,5 +16,7 @@ Rails.application.routes.draw do
     end
   end
 end
+
+
   # For details on the D
   # SL available within this file, see http://guides.rubyonrails.org/routing.html
