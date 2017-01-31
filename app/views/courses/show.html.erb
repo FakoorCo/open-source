@@ -45,7 +45,10 @@
     <% end %>
       <br/>
       <br/>
-      <%= link_to 'Enroll', course_enrollments_path(@course), class: 'enjoy-css', method: :post %>
-  </div>
+      <% if current_user && current_user.enrolled_in?(@course) %>
+        <h3 class="label label-info pull-right">You are enrolled!</h3>
+      <% else %>
+        <%= link_to 'Enroll', course_enrollments_path(@course), class: 'enjoy-css', method: :post %>        <% end %>
+      </div>
 
 </div>
