@@ -17,6 +17,10 @@ font-family: 'Droid Sans', sans-serif;
 font-family: 'PT Sans', sans-serif;
 font-family: 'Ubuntu', sans-serif; */
 
+.navbar-fixed-top {
+  width:100%;
+}
+
 .navbar {
   border-radius: 0;
 }
@@ -33,9 +37,7 @@ a.dropdown-menu, li.dropdown-menu, a.dropdown-header, .dropdown {
   color: black;
 }
 
-
-
-#navbar-collapse > .dropdown-menu {
+.navbar-collapse > .dropdown-menu {
     background:transparent !important;
 }
 
@@ -147,6 +149,7 @@ h2 {
   color: black;
   margin-left: 100px;
   margin-right: 10px;
+  height:200px;
 }
 
 .booyah-box {
@@ -250,6 +253,7 @@ h2 {
    position:relative;
    flex: 1;
 }
+
 #header {
    padding:10px;
 }
@@ -307,4 +311,8 @@ h2 {
   border: 1px solid;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   padding: 20px;
+}
+
+.img-responsive {
+  min-width:100%;
 }

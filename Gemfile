@@ -26,6 +26,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'mini_magick', '~> 4.3.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -44,7 +45,7 @@ gem 'rails', '>= 5.0.0.rc2', '< 5.1'
 
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '~> 3.7', '>= 3.7.1'
-gem 'sass-rails'
+gem 'sass-rails', '~> 5.0', '>= 5.0.6' # https://github.com/rails/sass-rails/issues/381
 
 gem 'rack', '~> 2.0', '>= 2.0.1'
 

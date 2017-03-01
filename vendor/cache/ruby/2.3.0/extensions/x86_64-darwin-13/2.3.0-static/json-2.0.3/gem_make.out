@@ -1,0 +1,13 @@
+current directory: /Users/kathleenfrench/Desktop/open-source/vendor/cache/ruby/2.3.0/gems/json-2.0.3/ext/json
+/Users/kathleenfrench/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20170224-98676-oc6jti.rb extconf.rb
+creating Makefile
+
+current directory: /Users/kathleenfrench/Desktop/open-source/vendor/cache/ruby/2.3.0/gems/json-2.0.3/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/kathleenfrench/Desktop/open-source/vendor/cache/ruby/2.3.0/gems/json-2.0.3/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/kathleenfrench/Desktop/open-source/vendor/cache/ruby/2.3.0/gems/json-2.0.3/ext/json
+make "DESTDIR=" install
