@@ -2,11 +2,11 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans|Lato|Old+Standard+TT|PT+Sans|Ubuntu|Vollkorn');
 @import url("http://fonts.googleapis.com/css?family=Warnes");
-
+@import url('https://fonts.googleapis.com/css?family=Arimo');
 
 html *
 {
-  font-family: "Lato", sans-serif;
+  font-family: 'Arimo', sans-serif;
 }
 
 
@@ -86,6 +86,7 @@ h1 {
   font-size: 40px;
   margin-top: 15px;
   margin-bottom: 4px;
+  font-weight:600;
 }
 
 h2 {
