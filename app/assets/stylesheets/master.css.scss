@@ -16,12 +16,18 @@ font-family: 'Droid Sans', sans-serif;
 font-family: 'PT Sans', sans-serif;
 font-family: 'Ubuntu', sans-serif; */
 
+#header {
+   padding:10px;
+   width:100%;
+}
+
 .navbar-fixed-top {
   width:100%;
 }
 
 .navbar {
   border-radius: 0;
+  width:100%;
 }
 
 .nav.navbar-nav li a {
@@ -48,6 +54,13 @@ a.navbar-brand {
   font-weight: 100;
   color: white;
   font-family: "Warnes", Helvetica, sans-serif !important;
+  margin-left:0;
+}
+
+.nav-container {
+  width:100%;
+  padding-left: 4px;
+  padding-right: 7px;
 }
 
 body {
@@ -249,12 +262,9 @@ h2 {
 
 #total-container {
    min-height:100%;
+   width:100%;
    position:relative;
    flex: 1;
-}
-
-#header {
-   padding:10px;
 }
 
 .brand-css  {
@@ -262,12 +272,13 @@ h2 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 10px;
+
+  margin-left:0;
   border: none;
   font: normal 85px/normal "Warnes", Helvetica, sans-serif !important;
   color: rgba(255,255,255,1);
   text-decoration: normal;
-  text-align: center !important;
+  text-align: left !important;
   -o-text-overflow: clip;
   text-overflow: clip;
   white-space: pre;
