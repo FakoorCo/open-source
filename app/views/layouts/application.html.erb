@@ -19,6 +19,8 @@
   <script src="http://vjs.zencdn.net/5.11.7/video.js"></script>
   <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 
+  <link href="https://fonts.googleapis.com/css?family=Warnes" rel="stylesheet">
+
   </head>
 
 <body>
@@ -51,8 +53,6 @@
                         <li><a href="#">Enroll</a></li>
                         <li class="divider"></li>
                         <li class="dropdown-header"></li>
-                        <li><a href="#">##</a></li>
-                        <li><a href="#">##</a></li>
                         <% if user_signed_in? %>
                           <li><%= link_to 'My Dashboard', dashboard_path%></li>
                           <li><%= link_to 'Sign Out', destroy_user_session_path %></li>

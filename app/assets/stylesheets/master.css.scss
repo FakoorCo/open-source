@@ -1,6 +1,5 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Droid+Sans|Lato|Old+Standard+TT|PT+Sans|Ubuntu|Vollkorn');
 @import url("http://fonts.googleapis.com/css?family=Warnes");
 @import url('https://fonts.googleapis.com/css?family=Arimo');
 
@@ -8,13 +7,6 @@ html *
 {
   font-family: 'Arimo', sans-serif;
 }
-
-/* font-family: 'Vollkorn', serif;
-font-family: 'Lato', sans-serif;
-font-family: 'Old Standard TT', serif;
-font-family: 'Droid Sans', sans-serif;
-font-family: 'PT Sans', sans-serif;
-font-family: 'Ubuntu', sans-serif; */
 
 #header {
    padding:10px;
@@ -53,7 +45,7 @@ a.dropdown-menu, li.dropdown-menu, a.dropdown-header, .dropdown {
 a.navbar-brand {
   font-weight: 100;
   color: white;
-  font-family: "Warnes", Helvetica, sans-serif !important;
+  font-family: 'Warnes', Helvetica, sans-serif !important;
   margin-left:0;
 }
 
@@ -121,7 +113,6 @@ h2 {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height:250px;
   box-shadow: 0px 1px 2px #2a2a2a;
   padding-top: 8px;
   -webkit-box-sizing: content-box;
@@ -138,6 +129,11 @@ h2 {
   background-clip: border-box;
   -webkit-background-size: 100% 1.2em;
   background-size: 100% 1.2em;
+
+  display: inline-block;
+  position: relative;
+
+  margin: 0 auto;
 }
 
 .home-column {
@@ -162,7 +158,11 @@ h2 {
   color: black;
   margin-left: 100px;
   margin-right: 10px;
-  height:200px;
+  height:auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .booyah-box {
@@ -305,7 +305,6 @@ h2 {
   background-color:black;
   a b {
     color: white;
-    font-family: "Helvetica Neue",Helvetica;
     font-weight:100;
     font-size: 25px;
   }
@@ -313,7 +312,6 @@ h2 {
   height:130px;
   font-size: 20px;
     color: white;
-    font-family: "Helvetica Neue",Helvetica;
     font-weight:100;
 }
 
