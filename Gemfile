@@ -53,6 +53,8 @@ gem "fog-aws"
 
 gem 'carrierwave-aws'
 
+gem 'video_thumb'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

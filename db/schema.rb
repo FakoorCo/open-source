@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170301235750) do
+ActiveRecord::Schema.define(version: 20170305194423) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170301235750) do
     t.datetime "updated_at", null: false
     t.string   "video"
     t.integer  "row_order"
+    t.string   "embed"
     t.index ["row_order"], name: "index_lessons_on_row_order", using: :btree
     t.index ["section_id"], name: "index_lessons_on_section_id", using: :btree
   end
@@ -70,6 +71,18 @@ ActiveRecord::Schema.define(version: 20170301235750) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+  end
+
+  create_table "video_links", force: :cascade do |t|
+    t.string   "link"
+    t.string   "title"
+    t.datetime "published_at"
+    t.integer  "likes"
+    t.integer  "dislikes"
+    t.string   "uid"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["uid"], name: "index_video_links_on_uid", using: :btree
   end
 
 end
