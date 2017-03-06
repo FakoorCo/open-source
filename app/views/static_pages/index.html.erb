@@ -30,25 +30,23 @@
 </div>
 
 <br/><br/>
-<div class="col-xs-10 col-xs-offset-1 features text-center">
-
-  <div class="col-sm-4 home-column">
+<div class="col-md-9 col-md-offset-1 home-column" style="text-align: center">
     <h4>Recent Course Additions</h4>
     <hr/>
-      <br/>
-  </div>
+    <div class="row">
+        <ul>
+          <% Course.last(3).each do |course| %>
+          <%= image_tag course.image, class:'img-responsive' unless course.image.blank? %><br/>
+          <%= link_to course.title, course_path(course) %>
+            <br/>
+              <p>   +  +  +  </p>
+            <br/>
+          <% end %>
+          <br/>
+        </ul>
+    </div>
+</div>
 
-  <div class="col-sm-4 home-column">
-    <h4>Featured Instructors</h4>
-    <hr/>
-      <br/>
-  </div>
-
-  <div class="col-sm-4 home-column">
-    <h4>Preview Courses</h4>
-    <hr/>
-      <br/>
-  </div>
 
 </div>
 
