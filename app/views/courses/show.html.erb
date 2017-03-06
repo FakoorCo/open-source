@@ -56,7 +56,8 @@
         <br />
 
         <% if current_user && current_user.enrolled_in?(@course) %>
-          <h3 class="label label-info">You Are Enrolled!</h3>
+          <h3 class="label label-info pull-right">You Are Enrolled!</h3>
+          <br/>
         <% else %>
           <% if @course.free? %>
               <%= link_to 'Enroll', course_enrollments_path(@course), class: 'enjoy-css pull-right', method: :post %>
