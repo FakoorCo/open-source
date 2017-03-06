@@ -130,18 +130,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="newLessonModalLabel">Add a new lesson</h4>
+        <h4 class="modal-title" id="newLessonModalLabel">Add a new lesson:</h4>
       </div>
       <%= simple_form_for @lesson, url: "#", html: {id: 'newLessonForm' } do |f| %>
         <div class="modal-body">
             <%= f.input :title %>
             <%= f.input :subtitle %>
-            <%= f.input :video %>
-            <%= f.input :embed %>
+            <%= f.input :video %><br/>
+            <%= f.input :embed, label: 'Copy YouTube Link to Embed Video:' %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <%= f.submit "Add the lesson", class: 'btn btn-primary' %>
+          <%= f.submit "Submit", class: 'btn btn-primary' %>
         </div>
       <% end %>
     </div>
