@@ -3,95 +3,32 @@
     $('.new-lesson-button').click(function( event ) {
       var lessonUrl = $( event.target).data('lesson-url');
       $('#newLessonForm').attr('action', lessonUrl);
+      $('#newLessonModalLabel').html( 'ADD LESSON to Section: ' + $(event.target).data('section-title') );
    });
 
-    $('.lessons').sortable({
-      update: function( event, ui ) {
-        $.ajax({
-          type: 'PUT',
-          url: ui.item.data('update-url'),
-          dataType: 'json',
-          data: { lesson: { row_order_position: ui.item.index() } }
-        });
+   $('.lessons').sortable({
+     update: function( event, ui ) {
+       $.ajax({
+         type: 'PUT',
+         url: ui.item.data('update-url'),
+         dataType: 'json',
+         data: { lesson: { row_order_position: ui.item.index() } }
+       });
       }
     });
 
     $('.sections').sortable({
       update: function( event, ui ) {
-        var data = $(this).sortable('serialize');
-
         $.ajax({
           type: 'PUT',
           url: ui.item.data('update-url'),
           dataType: 'json',
           data: { section: { row_order_position: ui.item.index() } }
         });
-      }
-    });
+       }
+     });
 
    });
-</script>
-
-<script>
-    $(function () {
-        var sortedItems = [];
-
-        $("#sortable").sortable({
-            stop: function (e, ui) {
-                SetSortOrder();
-                var items = PopulateSortItems();
-                SubmitData(items);
-            },
-        });
-        $("#sortable").disableSelection();
-
-        //Init the list items on load
-        SetSortOrder();
-
-        //Set the data-order attribute to the index
-        function SetSortOrder() {
-            $("#sortable li").each(function (index, value) {
-                $(this).data("order", index);
-            });
-        }
-
-        //AJAX
-        function SubmitData(items) {
-
-            $.ajax({
-                type: "POST",
-                url: "/TestingWeb/JQuerySortable.aspx/SaveSortOrder",
-                dataType: "json",
-                contentType: "application/json; charset=utf-8",
-                data: JSON.stringify({ "items": items })
-            })//done handler
-             .done(function (data) {
-                 console.log(data.d);
-             });
-        }
-
-        //Get the current order state
-        function PopulateSortItems() {
-            sortedItems.length = 0;
-
-            $("#sortable li").each(function (index, value) {
-                let item = {};
-
-                item.id = $(this).attr("id");
-                item.order = $(this).data("order");
-                sortedItems.push(item);
-            });
-
-            return sortedItems
-        }
-
-        //For debugging
-        $('#Button1').click(function () {
-            var items = PopulateSortItems();
-            console.log(items);
-        });
-
-    });
 </script>
 
 <br/>
@@ -117,7 +54,7 @@
 
       <ul class="sections">
 
-          <% current_course.sections(:row_order).each do |section| %>
+          <% current_course.sections.rank(:row_order).each do |section| %>
               <li data-update-url="<%= instructor_section_path section%>" class="section-li">
                 <div class="header pull-left">
                   <span class="glyphicon glyphicon-option-vertical"></span>
@@ -168,6 +105,7 @@
         </ul>
 
   </div>
+
 
   <!-- Modal -->
   <div class="modal fade" id="newSectionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

@@ -10,7 +10,7 @@ class Instructor::LessonsController < ApplicationController
 
   def update
     current_lesson.update_attributes(lesson_params)
-    render text: 'updated!'
+    render text: 'updated lesson!'
   end
 
   private
