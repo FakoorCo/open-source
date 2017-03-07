@@ -7,7 +7,7 @@ class Lesson < ApplicationRecord
   ranks :row_order, :with_same => :section_id
 
   def code
-    self.embed.split('/').last 
+    self.embed.split("v=")[1].substring(0,11)
   end
 
   def next_lesson
