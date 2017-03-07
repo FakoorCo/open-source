@@ -38,7 +38,7 @@
           <% Course.last(3).each do |course| %>
           <%= image_tag course.image, class:'img-responsive' unless course.image.blank? %><br/>
           <%= link_to course.title, course_path(course) %>
-            <br/>
+            <br/><br/>
               <p>   +  +  +  </p>
             <br/>
           <% end %>
