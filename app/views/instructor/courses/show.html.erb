@@ -107,22 +107,19 @@
             <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f| %>
             <%= f.input :title %>
           <br />
-            <%= f.submit "Add a section", class: 'btn btn-primary' %>
           <br />
           <br />
-            <% end %>
         </div>
       <div class="modal-footer">
+        <%= f.submit "Add a section", class: 'btn btn-primary' %>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <%= f.submit "Submit", class: 'btn btn-primary'%>
+        <% end %>
       </div>
       <% end %>
     </div>
   </div>
 </div>
 
-
-<!-- Modal -->
 
 <!-- Modal -->
 <div class="modal fade" id="newLessonModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

@@ -73,16 +73,4 @@ ActiveRecord::Schema.define(version: 20170305194423) do
     t.datetime "updated_at",                          null: false
   end
 
-  create_table "video_links", force: :cascade do |t|
-    t.string   "link"
-    t.string   "title"
-    t.datetime "published_at"
-    t.integer  "likes"
-    t.integer  "dislikes"
-    t.string   "uid"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["uid"], name: "index_video_links_on_uid", using: :btree
-  end
-
 end
