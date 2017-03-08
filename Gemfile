@@ -41,7 +41,7 @@ gem 'devise', '>= 3.2.4'
 
 gem 'rails_12factor', group: :production
 
-gem 'rails', '>= 5.0.0.rc2', '< 5.1'
+gem 'rails', '5.0.2'
 
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '~> 3.7', '>= 3.7.1'

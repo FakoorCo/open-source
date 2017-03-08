@@ -3,7 +3,7 @@
     $('.new-lesson-button').click(function( event ) {
       var lessonUrl = $( event.target).data('lesson-url');
       $('#newLessonForm').attr('action', lessonUrl);
-      $('#newLessonModalLabel').html( 'ADD LESSON to Section: ' + $(event.target).data('section-title') );
+      $('#newLessonModalLabel').html( 'Add Lesson' + $(event.target).data('section-title') );
    });
 
    $('.lessons').sortable({
