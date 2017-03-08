@@ -15,9 +15,21 @@ class Instructor::CoursesController < ApplicationController
     end
   end
 
+  def edit
+    @course = current_course
+  end
+
+  def update
+    if current_course.update_attributes(course_params)
+      redirect_to instructor_course_path(@course)
+    else
+      render :edit
+    end
+  end
+
   def show
     @section = Section.new
-    @lesson = Lesson.new 
+    @lesson = Lesson.new
   end
 
   private

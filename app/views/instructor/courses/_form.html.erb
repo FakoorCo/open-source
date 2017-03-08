@@ -1,10 +1,11 @@
-<br/><br/><br/><br/>
-<%= simple_form_for(@instructor_course) do |f| %>
-  <%= f.error_notification %>
-  <div class="form-inputs">
-  </div>
-  <div class="form-actions">
-  <div class="enjoy-css"><%= f.button :submit %></div>
-  </div>
+<%= simple_form_for course, html: { multipart: true }, url: instructor_courses_path do |f| %>
+<%= f.input :title %>
+<%= f.input :description %>
+<%= f.input :cost %>
+<br/>
+<p> Image Upload: </p>
+<%= f.file_field :image %>
+<br />
+<%= f.submit "Create", class: 'enjoy-css pull-right' %>
+<br />
 <% end %>
-<br/><br/><br/>

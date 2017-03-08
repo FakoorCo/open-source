@@ -9,8 +9,21 @@ class Instructor::LessonsController < ApplicationController
   end
 
   def update
-    current_lesson.update_attributes(lesson_params)
-    render text: 'updated lesson!'
+    success = current_lesson.update_attributes(lesson_params)
+    respond_to do |format|
+      format.html do
+        if success
+          redirect_to instructor_course_path(@lesson.course)
+        else
+          render :edit
+        end
+      end
+      format.json { render json: success ? 'success' : 'failed' }
+    end
+  end
+
+  def edit
+    @lesson = current_lesson
   end
 
   private

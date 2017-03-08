@@ -9,8 +9,21 @@ class Instructor::SectionsController < ApplicationController
   end
 
   def update
-    current_section.update_attributes(section_params)
-    render text: 'updated!'
+    success = current_section.update_attributes(section_params)
+    respond_to do |format|
+      format.html do
+        if success
+          redirect_to instructor_course_path(@section.course)
+        else
+          render :edit
+        end
+      end
+      format.json { render json: success ? 'success' : 'failed' }
+    end
+  end
+
+  def edit
+    @section = current_section
   end
 
   private
