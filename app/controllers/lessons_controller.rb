@@ -13,7 +13,7 @@ class LessonsController < ApplicationController
   end
 
   def current_course
-    current_lesson.course
+    @current_course ||= current_lesson.section.course
   end
 
   def check_enrollment

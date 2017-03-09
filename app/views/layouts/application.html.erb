@@ -18,8 +18,10 @@
   <link href="http://vjs.zencdn.net/5.11.7/video-js.css" rel="stylesheet">
   <script src="http://vjs.zencdn.net/5.11.7/video.js"></script>
   <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+  <script src="bootstrap.min.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Warnes" rel="stylesheet">
+
 
   </head>
 
@@ -73,10 +75,10 @@
 <div class="body">
 
     <% if notice.present? %>
-    <p class="alert alert-info"><%= notice %></p>
+    <p class="alert alert-info" role="alert"><%= notice %></p>
     <% end %>
     <% if alert.present? %>
-    <p class="alert alert-danger"><%= alert %></p>
+    <p class="alert alert-danger" role="alert"><%= alert %></p>
     <% end %>
 
 </div>
