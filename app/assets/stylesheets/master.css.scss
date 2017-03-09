@@ -323,17 +323,25 @@ h4 {
 }
 
 .lesson {
-  background-color:black;
-  a b {
-    color: white;
-    font-weight:100;
-    font-size: 25px;
-  }
+
+  background-color: rgba(238, 238, 238, .5);
   margin-top: 10px;
-  height:130px;
-  font-size: 20px;
-    color: white;
-    font-weight:100;
+  height:80px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 1px;
+  overflow: hidden;
+  a:visited{
+    text-decoration: none;
+  }
+  a:link{
+    text-decoration:none;
+    font-weight: bold;
+  }
+  a:hover{
+    color:black;
+  }
 }
 
 .section {
@@ -352,14 +360,16 @@ ul {
 }
 
 .section-li {
-  border: 1px solid;
-  border-color: #e4e4e4 #bebebd #e4e4e4;
+  border: none;
   padding:20px;
   margin:20px;
+  background-color: rgba(238, 238, 238, .5);
+
 }
 
 ul .header{
   font-size:25px;
+  text-transform: uppercase;
 }
 
 ul .header .glyphicon {
@@ -367,16 +377,28 @@ ul .header .glyphicon {
 }
 
 .lessons li {
-  background:black;
-  color: white;
   margin:10px;
   font-weight: 100;
   padding:8px;
   font-size:15px;
+
+  color: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: transparent;
+  overflow: hidden;
+  border: 0.5px solid #000000;
+}
+
+.lesson {
+  .text-center {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .lessons li b {
-  font-size:25px;
+  font-size:20px;
   font-weight:100;
 }
 
@@ -405,4 +427,26 @@ ul .header .glyphicon {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+.button-pill {
+  position: relative;
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+  padding: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: transparent;
+  border-radius: 16px;
+  border: 1px solid #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.4s cubic-bezier(0.4,0,0.2,1),border 0.4s cubic-bezier(0.4,0,0.2,1);
 }
