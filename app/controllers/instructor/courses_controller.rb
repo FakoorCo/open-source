@@ -16,15 +16,19 @@ class Instructor::CoursesController < ApplicationController
   end
 
   def edit
-    @course = current_course
+    @course = Course.find(params[:id])
   end
 
   def update
-    if current_course.update_attributes(course_params)
-      redirect_to instructor_course_path(@course)
-    else
-      render :edit
-    end
+    @course = Course.find(params[:id])
+    @course.update_attributes(course_params)
+    redirect_to instructor_course_path(current_course)
+  end
+
+  def destroy
+    @course = Course.find(params[:id])
+    @course.destroy
+    redirect_to dashboard_path
   end
 
   def show
@@ -41,13 +45,12 @@ class Instructor::CoursesController < ApplicationController
   end
 
   helper_method :current_course
-
   def current_course
     @current_course ||= Course.find(params[:id])
   end
 
   def course_params
-    params.require(:course).permit(:title, :description, :cost, :image, :row_order_position)
+    params.require(:course).permit(:title, :description, :cost, :image)
   end
 
 end

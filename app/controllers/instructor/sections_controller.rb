@@ -8,23 +8,23 @@ class Instructor::SectionsController < ApplicationController
     redirect_to instructor_course_path(current_course)
   end
 
-  def update
-    success = current_section.update_attributes(section_params)
-    respond_to do |format|
-      format.html do
-        if success
-          redirect_to instructor_course_path(@section.course)
-        else
-          render :edit
-        end
-      end
-      format.json { render json: success ? 'success' : 'failed' }
-    end
-  end
-
   def edit
     @section = current_section
   end
+
+  def update
+    @section = Section.find(params[:id])
+    @section.update_attributes(section_params)
+    redirect_to instructor_course_path(current_course)
+  end
+
+  def destroy
+    @section = current_section
+    @section.destroy
+    course = @section.course
+    redirect_to instructor_course_path(course)
+  end
+
 
   private
 
@@ -46,7 +46,11 @@ class Instructor::SectionsController < ApplicationController
 
   helper_method :current_course
   def current_course
-    @current_course ||= Course.find(params[:course_id])
+    if params[:course_id]
+      @current_course ||= Course.find(params[:course_id])
+    else
+      current_section.course
+    end
   end
 
   def section_params
