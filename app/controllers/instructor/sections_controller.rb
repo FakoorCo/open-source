@@ -13,18 +13,14 @@ class Instructor::SectionsController < ApplicationController
   end
 
   def update
-    @section = Section.find(params[:id])
-    @section.update_attributes(section_params)
+    current_section.update_attributes(section_params)
     redirect_to instructor_course_path(current_course)
   end
 
   def destroy
-    @section = current_section
-    @section.destroy
-    course = @section.course
-    redirect_to instructor_course_path(course)
+    current_section.destroy
+    redirect_to instructor_course_path(current_course)
   end
-
 
   private
 

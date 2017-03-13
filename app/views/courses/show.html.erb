@@ -50,50 +50,33 @@
   <% end %>
 </div>
 
-<br class="clear"/>
-
-<div class="col-xs-12">
-  <% @course.sections.rank(:row_order).each do |section| %>
   <br/><br/>
+  <br class="clr"/>
 
-  <div class="section">
-    <h3><%= section.title %></h3>
-    <br/><br/>
-
-      <div class="col-xs-11 text-center">
-        <% section.lessons.rank(:row_order).each do |lesson| %>
-            <div class="lesson">
-                <% if current_user && current_user.enrolled_in?(@course) %>
-                  <%= link_to lesson_path(lesson) do %>
-                    <b><%= lesson.title %></b>
-                      <br/>
-                    <p><%= lesson.subtitle %></p>
-                    <% end %>
-                <% else %>
-                    <b><%= lesson.title %></b>
-                      <br/>
-                    <p><%= lesson.subtitle %></p>
-                <% end %>
-                <br class="clear"/>
-            </div>
-          <% end %>
-      </div>
-    </div>
-
-    <br class="clear"/>
-
-</div>
-
-<br class="clear"/>
-
-<% end %>
+<div class="col-12 section-show">
+<% @course.sections.each do |section| %>
 <br/><br/>
-
+  <div class="section">
+    <h3>
+      <%= section.title %>
+    </h3><br/>
+    <div class="row">
+      <% section.lessons.each do |lesson| %>
+        <div class="col-12 col-sm-6">
+          <div class="lesson text-center">
+            <br />
+            <%= link_to lesson_path(lesson) do %>
+              <b><%= lesson.title %></b>
+              <br />
+              <%= lesson.subtitle %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <br class="clr" />
+  </div>
+<% end %>
 </div>
-</div>
-
-
-
-
-
+<br class="clr" />
 </div>
